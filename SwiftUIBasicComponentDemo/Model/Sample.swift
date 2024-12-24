@@ -40,7 +40,9 @@ struct SampleData {
         SampleItem(name: "图片选择", destination: ImagePickerDemoView()),
         SampleItem(name: "表单", destination: FormDemoView()),
         SampleItem(name: "手势", destination: GestureDemoView()),
-        SampleItem(name: "动画", destination: AnimationDemoView())
+        SampleItem(name: "动画", destination: AnimationDemoView()),
+        SampleItem(name: "布局", destination: LayoutDemoView()),
+        SampleItem(name: "弹窗", destination: PopupDemoView())
     ]
     
     // 获取示例数据

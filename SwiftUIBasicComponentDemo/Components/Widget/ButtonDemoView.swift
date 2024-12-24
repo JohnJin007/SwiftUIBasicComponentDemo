@@ -20,6 +20,16 @@ struct ButtonDemoView: View {
         VStack {
             SampleSectionTitleView(title: "1.普通按钮", desc: "基于原生的Button按钮")
             
+            Rectangle()
+                .fill(.yellow)
+                .jk_cornerRadius(20, corners: [.topLeft, .topRight])
+                .frame(width: 200, height: 100)
+                .overlay(
+                    Text("设置局部圆角")
+                        .foregroundColor(.white)
+                        .font(.system(size: 18))
+                )
+            
             Button("按钮") {
                 debugPrint("点击事件")
             }

@@ -29,8 +29,11 @@
 		032C4FD42D140B280036D2FD /* RoundedAndShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C4FD32D140B0F0036D2FD /* RoundedAndShadowButton.swift */; };
 		032C4FD62D141AD10036D2FD /* GestureDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C4FD52D141AC60036D2FD /* GestureDemoView.swift */; };
 		0335F16B2D151154009004E4 /* AnimationDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335F16A2D151137009004E4 /* AnimationDemoView.swift */; };
+		0335F16D2D1577E9009004E4 /* LayoutDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335F16C2D1577DD009004E4 /* LayoutDemoView.swift */; };
 		0378E7112D0FC3B000839E26 /* CardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0378E7102D0FC3A100839E26 /* CardDemoView.swift */; };
 		0378E7182D101B1A00839E26 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0378E7172D101B1A00839E26 /* R.generated.swift */; };
+		03D784192D194C8F00CB0C9F /* JKRoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D784182D194C6C00CB0C9F /* JKRoundedRectangle.swift */; };
+		03D7841B2D19516500CB0C9F /* PopupDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D7841A2D19515600CB0C9F /* PopupDemoView.swift */; };
 		03F905302D1116FF00557DE6 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9052F2D1116F400557DE6 /* Consts.swift */; };
 		03F905332D11638300557DE6 /* CustomPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F905322D11637300557DE6 /* CustomPreferenceKey.swift */; };
 		03F905372D1167D100557DE6 /* KeyboardAwareDemoView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F905362D1167B500557DE6 /* KeyboardAwareDemoView2.swift */; };
@@ -61,8 +64,11 @@
 		032C4FD32D140B0F0036D2FD /* RoundedAndShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedAndShadowButton.swift; sourceTree = "<group>"; };
 		032C4FD52D141AC60036D2FD /* GestureDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureDemoView.swift; sourceTree = "<group>"; };
 		0335F16A2D151137009004E4 /* AnimationDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDemoView.swift; sourceTree = "<group>"; };
+		0335F16C2D1577DD009004E4 /* LayoutDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDemoView.swift; sourceTree = "<group>"; };
 		0378E7102D0FC3A100839E26 /* CardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDemoView.swift; sourceTree = "<group>"; };
 		0378E7172D101B1A00839E26 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		03D784182D194C6C00CB0C9F /* JKRoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKRoundedRectangle.swift; sourceTree = "<group>"; };
+		03D7841A2D19515600CB0C9F /* PopupDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDemoView.swift; sourceTree = "<group>"; };
 		03F9052F2D1116F400557DE6 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		03F905322D11637300557DE6 /* CustomPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPreferenceKey.swift; sourceTree = "<group>"; };
 		03F905362D1167B500557DE6 /* KeyboardAwareDemoView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareDemoView2.swift; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 		031318132D0ADD8000A7AEB2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				03D784182D194C6C00CB0C9F /* JKRoundedRectangle.swift */,
 				032C4FD32D140B0F0036D2FD /* RoundedAndShadowButton.swift */,
 				031E40002D12C9FE00CBC810 /* ImagePicker.swift */,
 				031E3FF82D12B23E00CBC810 /* LottieView.swift */,
@@ -107,6 +114,8 @@
 		031318172D0ADD8000A7AEB2 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				03D7841A2D19515600CB0C9F /* PopupDemoView.swift */,
+				0335F16C2D1577DD009004E4 /* LayoutDemoView.swift */,
 				0335F16A2D151137009004E4 /* AnimationDemoView.swift */,
 				032C4FD52D141AC60036D2FD /* GestureDemoView.swift */,
 				032C4FD12D13BC5C0036D2FD /* FormDemoView.swift */,
@@ -389,6 +398,7 @@
 				031318242D0ADD8000A7AEB2 /* CustomNavBackButton.swift in Sources */,
 				031318252D0ADD8000A7AEB2 /* SampleSectionTitleView.swift in Sources */,
 				031318262D0ADD8000A7AEB2 /* ButtonDemoView.swift in Sources */,
+				03D784192D194C8F00CB0C9F /* JKRoundedRectangle.swift in Sources */,
 				031318272D0ADD8000A7AEB2 /* TextDemoView.swift in Sources */,
 				031318282D0ADD8000A7AEB2 /* TextFieldDemoView.swift in Sources */,
 				0378E7182D101B1A00839E26 /* R.generated.swift in Sources */,
@@ -399,8 +409,10 @@
 				031E3FF92D12B24700CBC810 /* LottieView.swift in Sources */,
 				032C4FD62D141AD10036D2FD /* GestureDemoView.swift in Sources */,
 				03F905372D1167D100557DE6 /* KeyboardAwareDemoView2.swift in Sources */,
+				03D7841B2D19516500CB0C9F /* PopupDemoView.swift in Sources */,
 				0319F6C92D0C2D37000FDF55 /* BaseView.swift in Sources */,
 				032C4FD22D13BC690036D2FD /* FormDemoView.swift in Sources */,
+				0335F16D2D1577E9009004E4 /* LayoutDemoView.swift in Sources */,
 				03F905332D11638300557DE6 /* CustomPreferenceKey.swift in Sources */,
 				03F905302D1116FF00557DE6 /* Consts.swift in Sources */,
 				031E3FFF2D12C51300CBC810 /* ImagePickerDemoView.swift in Sources */,
