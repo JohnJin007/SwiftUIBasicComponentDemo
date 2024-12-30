@@ -25,9 +25,22 @@
 		031E3FFD2D12B50900CBC810 /* thank_you.json in Resources */ = {isa = PBXBuildFile; fileRef = 031E3FFC2D12B50900CBC810 /* thank_you.json */; };
 		031E3FFF2D12C51300CBC810 /* ImagePickerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E3FFE2D12C50300CBC810 /* ImagePickerDemoView.swift */; };
 		031E40012D12CA0B00CBC810 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E40002D12C9FE00CBC810 /* ImagePicker.swift */; };
+		03247EB52D222EBD003ED4D0 /* TabDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EB42D222EA9003ED4D0 /* TabDemoView.swift */; };
+		03247EB72D2237D6003ED4D0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EB62D2237CC003ED4D0 /* HomeView.swift */; };
+		03247EB92D223F53003ED4D0 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EB82D223F47003ED4D0 /* ViewRouter.swift */; };
+		03247EBC2D2244D7003ED4D0 /* TabBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EBB2D224026003ED4D0 /* TabBarIcon.swift */; };
+		03247EBE2D224A79003ED4D0 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EBD2D224A6D003ED4D0 /* CustomTabView.swift */; };
+		03247EC02D2273C5003ED4D0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EBF2D2273C1003ED4D0 /* Home.swift */; };
+		03247EC22D2273CD003ED4D0 /* My.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EC12D2273CA003ED4D0 /* My.swift */; };
+		03247EC42D2280F6003ED4D0 /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EC32D2280DA003ED4D0 /* HideKeyboard.swift */; };
+		03247EC62D228495003ED4D0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EC52D228486003ED4D0 /* UIColorExtension.swift */; };
 		032C4FD22D13BC690036D2FD /* FormDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C4FD12D13BC5C0036D2FD /* FormDemoView.swift */; };
 		032C4FD42D140B280036D2FD /* RoundedAndShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C4FD32D140B0F0036D2FD /* RoundedAndShadowButton.swift */; };
 		032C4FD62D141AD10036D2FD /* GestureDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C4FD52D141AC60036D2FD /* GestureDemoView.swift */; };
+		033520632D1A8D40006ABEBF /* AlertDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033520622D1A8D36006ABEBF /* AlertDemoView.swift */; };
+		033520662D1A9DFE006ABEBF /* AlertToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033520652D1A9DF6006ABEBF /* AlertToast.swift */; };
+		033520682D1A9FB1006ABEBF /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033520672D1A9FA8006ABEBF /* BlurView.swift */; };
+		0335206A2D1AA0AF006ABEBF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033520692D1AA076006ABEBF /* ActivityIndicator.swift */; };
 		0335F16B2D151154009004E4 /* AnimationDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335F16A2D151137009004E4 /* AnimationDemoView.swift */; };
 		0335F16D2D1577E9009004E4 /* LayoutDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335F16C2D1577DD009004E4 /* LayoutDemoView.swift */; };
 		0378E7112D0FC3B000839E26 /* CardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0378E7102D0FC3A100839E26 /* CardDemoView.swift */; };
@@ -60,9 +73,22 @@
 		031E3FFE2D12C50300CBC810 /* ImagePickerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerDemoView.swift; sourceTree = "<group>"; };
 		031E40002D12C9FE00CBC810 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0322C7B42D083AF300C5CFF9 /* SwiftUIBasicComponentDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBasicComponentDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03247EB42D222EA9003ED4D0 /* TabDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDemoView.swift; sourceTree = "<group>"; };
+		03247EB62D2237CC003ED4D0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		03247EB82D223F47003ED4D0 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		03247EBB2D224026003ED4D0 /* TabBarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarIcon.swift; sourceTree = "<group>"; };
+		03247EBD2D224A6D003ED4D0 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		03247EBF2D2273C1003ED4D0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		03247EC12D2273CA003ED4D0 /* My.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My.swift; sourceTree = "<group>"; };
+		03247EC32D2280DA003ED4D0 /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
+		03247EC52D228486003ED4D0 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		032C4FD12D13BC5C0036D2FD /* FormDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDemoView.swift; sourceTree = "<group>"; };
 		032C4FD32D140B0F0036D2FD /* RoundedAndShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedAndShadowButton.swift; sourceTree = "<group>"; };
 		032C4FD52D141AC60036D2FD /* GestureDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureDemoView.swift; sourceTree = "<group>"; };
+		033520622D1A8D36006ABEBF /* AlertDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDemoView.swift; sourceTree = "<group>"; };
+		033520652D1A9DF6006ABEBF /* AlertToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertToast.swift; sourceTree = "<group>"; };
+		033520672D1A9FA8006ABEBF /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		033520692D1AA076006ABEBF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		0335F16A2D151137009004E4 /* AnimationDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDemoView.swift; sourceTree = "<group>"; };
 		0335F16C2D1577DD009004E4 /* LayoutDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDemoView.swift; sourceTree = "<group>"; };
 		0378E7102D0FC3A100839E26 /* CardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDemoView.swift; sourceTree = "<group>"; };
@@ -92,6 +118,8 @@
 		031318102D0ADD8000A7AEB2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				03247EC52D228486003ED4D0 /* UIColorExtension.swift */,
+				03247EC32D2280DA003ED4D0 /* HideKeyboard.swift */,
 				0313180F2D0ADD8000A7AEB2 /* UINavigationControllerPopGesture.swift */,
 			);
 			path = Extensions;
@@ -100,6 +128,8 @@
 		031318132D0ADD8000A7AEB2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				03247EBA2D224014003ED4D0 /* CustomTabView */,
+				033520642D1A9DE7006ABEBF /* AlertToast */,
 				03D784182D194C6C00CB0C9F /* JKRoundedRectangle.swift */,
 				032C4FD32D140B0F0036D2FD /* RoundedAndShadowButton.swift */,
 				031E40002D12C9FE00CBC810 /* ImagePicker.swift */,
@@ -114,6 +144,12 @@
 		031318172D0ADD8000A7AEB2 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				03247EC12D2273CA003ED4D0 /* My.swift */,
+				03247EBF2D2273C1003ED4D0 /* Home.swift */,
+				03247EBD2D224A6D003ED4D0 /* CustomTabView.swift */,
+				03247EB62D2237CC003ED4D0 /* HomeView.swift */,
+				03247EB42D222EA9003ED4D0 /* TabDemoView.swift */,
+				033520622D1A8D36006ABEBF /* AlertDemoView.swift */,
 				03D7841A2D19515600CB0C9F /* PopupDemoView.swift */,
 				0335F16C2D1577DD009004E4 /* LayoutDemoView.swift */,
 				0335F16A2D151137009004E4 /* AnimationDemoView.swift */,
@@ -214,6 +250,25 @@
 				0322C7B42D083AF300C5CFF9 /* SwiftUIBasicComponentDemo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		03247EBA2D224014003ED4D0 /* CustomTabView */ = {
+			isa = PBXGroup;
+			children = (
+				03247EBB2D224026003ED4D0 /* TabBarIcon.swift */,
+				03247EB82D223F47003ED4D0 /* ViewRouter.swift */,
+			);
+			path = CustomTabView;
+			sourceTree = "<group>";
+		};
+		033520642D1A9DE7006ABEBF /* AlertToast */ = {
+			isa = PBXGroup;
+			children = (
+				033520692D1AA076006ABEBF /* ActivityIndicator.swift */,
+				033520672D1A9FA8006ABEBF /* BlurView.swift */,
+				033520652D1A9DF6006ABEBF /* AlertToast.swift */,
+			);
+			path = AlertToast;
 			sourceTree = "<group>";
 		};
 		03F905312D11635900557DE6 /* Business */ = {
@@ -395,6 +450,7 @@
 				031E3FF72D1277D900CBC810 /* ImageDemoView.swift in Sources */,
 				031318232D0ADD8000A7AEB2 /* UINavigationControllerPopGesture.swift in Sources */,
 				0335F16B2D151154009004E4 /* AnimationDemoView.swift in Sources */,
+				03247EB52D222EBD003ED4D0 /* TabDemoView.swift in Sources */,
 				031318242D0ADD8000A7AEB2 /* CustomNavBackButton.swift in Sources */,
 				031318252D0ADD8000A7AEB2 /* SampleSectionTitleView.swift in Sources */,
 				031318262D0ADD8000A7AEB2 /* ButtonDemoView.swift in Sources */,
@@ -404,18 +460,30 @@
 				0378E7182D101B1A00839E26 /* R.generated.swift in Sources */,
 				031318292D0ADD8000A7AEB2 /* Events.swift in Sources */,
 				032C4FD42D140B280036D2FD /* RoundedAndShadowButton.swift in Sources */,
+				03247EB92D223F53003ED4D0 /* ViewRouter.swift in Sources */,
 				0313182A2D0ADD8000A7AEB2 /* Sample.swift in Sources */,
+				03247EBE2D224A79003ED4D0 /* CustomTabView.swift in Sources */,
 				0313182B2D0ADD8000A7AEB2 /* ContentView.swift in Sources */,
+				03247EC22D2273CD003ED4D0 /* My.swift in Sources */,
+				033520662D1A9DFE006ABEBF /* AlertToast.swift in Sources */,
+				0335206A2D1AA0AF006ABEBF /* ActivityIndicator.swift in Sources */,
+				033520632D1A8D40006ABEBF /* AlertDemoView.swift in Sources */,
 				031E3FF92D12B24700CBC810 /* LottieView.swift in Sources */,
+				033520682D1A9FB1006ABEBF /* BlurView.swift in Sources */,
 				032C4FD62D141AD10036D2FD /* GestureDemoView.swift in Sources */,
 				03F905372D1167D100557DE6 /* KeyboardAwareDemoView2.swift in Sources */,
 				03D7841B2D19516500CB0C9F /* PopupDemoView.swift in Sources */,
 				0319F6C92D0C2D37000FDF55 /* BaseView.swift in Sources */,
+				03247EC62D228495003ED4D0 /* UIColorExtension.swift in Sources */,
 				032C4FD22D13BC690036D2FD /* FormDemoView.swift in Sources */,
+				03247EC02D2273C5003ED4D0 /* Home.swift in Sources */,
 				0335F16D2D1577E9009004E4 /* LayoutDemoView.swift in Sources */,
 				03F905332D11638300557DE6 /* CustomPreferenceKey.swift in Sources */,
+				03247EB72D2237D6003ED4D0 /* HomeView.swift in Sources */,
 				03F905302D1116FF00557DE6 /* Consts.swift in Sources */,
 				031E3FFF2D12C51300CBC810 /* ImagePickerDemoView.swift in Sources */,
+				03247EC42D2280F6003ED4D0 /* HideKeyboard.swift in Sources */,
+				03247EBC2D2244D7003ED4D0 /* TabBarIcon.swift in Sources */,
 				031E40012D12CA0B00CBC810 /* ImagePicker.swift in Sources */,
 				0313182C2D0ADD8000A7AEB2 /* SwiftUIBasicComponentDemoApp.swift in Sources */,
 				0378E7112D0FC3B000839E26 /* CardDemoView.swift in Sources */,

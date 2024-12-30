@@ -96,7 +96,8 @@ struct TextFieldDemoView: View {
                         sampleSingleLineView
                         sampleMultiLineView
                         sampleFormTextFieldView
-                    }.padding(15)
+                    }
+                    .padding(15)
                 }
             }
             .navigationTitle("输入控件示例")

@@ -15,11 +15,14 @@ struct ContentView: View {
         }, label: {
             HStack {
                 Spacer()
-                Text(name).font(.system(size: 18))
+                Text(name)
+                    .font(.system(size: 18))
+                    .foregroundColor(Color.Hex(0x409EFF))
                 Spacer()
-            }.frame(height: 100)
-                .background(Rectangle().fill(.gray.opacity(0.3)))
-                .cornerRadius(5, antialiased: true)
+            }
+            .frame(height: 100)
+            .background(Rectangle().fill(.gray.opacity(0.3)))
+            .cornerRadius(5, antialiased: true)
         })
     }
     

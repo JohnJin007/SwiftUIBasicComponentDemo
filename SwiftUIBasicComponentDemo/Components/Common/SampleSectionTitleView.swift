@@ -24,6 +24,9 @@ struct SampleSectionTitleView: View {
         }
         .padding(.vertical, 10)
         .background(.green)
+        .onTapGesture {
+            hideKeyboard()
+        }
     }
 }
 
