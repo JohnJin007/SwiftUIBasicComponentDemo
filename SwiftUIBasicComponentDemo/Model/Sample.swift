@@ -45,7 +45,8 @@ struct SampleData {
         SampleItem(name: "弹窗", destination: PopupDemoView()),
         SampleItem(name: "提示", destination: AlertDemoView()),
         SampleItem(name: "Tab视图", destination: TabDemoView()),
-        SampleItem(name: "自定义Tab视图", destination: CustomTabView(viewRouter: ViewRouter()))
+        SampleItem(name: "自定义Tab视图", destination: CustomTabView(viewRouter: ViewRouter())),
+        SampleItem(name: "游戏视图", destination: GameDemoView())
     ]
     
     // 获取示例数据

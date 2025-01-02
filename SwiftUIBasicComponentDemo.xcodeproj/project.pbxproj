@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0309EE692D23D3C90089D4CC /* GameDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0309EE682D23C3C50089D4CC /* GameDemoView.swift */; };
 		031318232D0ADD8000A7AEB2 /* UINavigationControllerPopGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313180F2D0ADD8000A7AEB2 /* UINavigationControllerPopGesture.swift */; };
 		031318242D0ADD8000A7AEB2 /* CustomNavBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031318112D0ADD8000A7AEB2 /* CustomNavBackButton.swift */; };
 		031318252D0ADD8000A7AEB2 /* SampleSectionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031318122D0ADD8000A7AEB2 /* SampleSectionTitleView.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0309EE682D23C3C50089D4CC /* GameDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDemoView.swift; sourceTree = "<group>"; };
 		0313180F2D0ADD8000A7AEB2 /* UINavigationControllerPopGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerPopGesture.swift; sourceTree = "<group>"; };
 		031318112D0ADD8000A7AEB2 /* CustomNavBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBackButton.swift; sourceTree = "<group>"; };
 		031318122D0ADD8000A7AEB2 /* SampleSectionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSectionTitleView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		031318172D0ADD8000A7AEB2 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				0309EE682D23C3C50089D4CC /* GameDemoView.swift */,
 				03247EC12D2273CA003ED4D0 /* My.swift */,
 				03247EBF2D2273C1003ED4D0 /* Home.swift */,
 				03247EBD2D224A6D003ED4D0 /* CustomTabView.swift */,
@@ -465,6 +468,7 @@
 				03247EBE2D224A79003ED4D0 /* CustomTabView.swift in Sources */,
 				0313182B2D0ADD8000A7AEB2 /* ContentView.swift in Sources */,
 				03247EC22D2273CD003ED4D0 /* My.swift in Sources */,
+				0309EE692D23D3C90089D4CC /* GameDemoView.swift in Sources */,
 				033520662D1A9DFE006ABEBF /* AlertToast.swift in Sources */,
 				0335206A2D1AA0AF006ABEBF /* ActivityIndicator.swift in Sources */,
 				033520632D1A8D40006ABEBF /* AlertDemoView.swift in Sources */,

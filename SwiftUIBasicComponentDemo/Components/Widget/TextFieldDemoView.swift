@@ -14,6 +14,7 @@ struct TextFieldDemoView: View {
     @State var text: String = ""
     @State private var name: String = ""
     @State private var newpassword: String = ""
+    @State var searchText: String = ""
     
     private var sampleSingleLineView: some View {
         VStack {
@@ -87,6 +88,47 @@ struct TextFieldDemoView: View {
         }
     }
     
+    private var sampleCustomSearchBarView: some View {
+        VStack {
+            SampleSectionTitleView(title: "4.自定义搜索输入框")
+            HStack {
+                TextField("搜索内容", text: $searchText)
+                    .padding(.horizontal, 32)   //水平内边距，与文本内容
+                    .padding(.vertical, 7)
+                    .background(Color(.systemGray2))
+                    .cornerRadius(8)
+                    .overlay {
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.gray)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 8)
+                            
+                            //编辑时显示清除按钮
+                            if searchText != "" {
+                                Button {
+                                    searchText = ""
+                                } label: {
+                                    Image(systemName: "multiply.circle.fill")
+                                        .foregroundColor(.gray)
+                                        .padding(.trailing, 8)
+                                }
+
+                            }
+                        }
+                    }
+                    .onChange(of: searchText) { oldValue, newValue in
+                        if searchText != "" {
+                            
+                        } else {
+                            searchText = ""
+                        }
+                    }
+            }
+            .padding(.horizontal, 15)
+        }
+    }
+    
     var body: some View {
         BaseView(buttonTitle: "首页", textColor: .red){
             ZStack {
@@ -96,6 +138,7 @@ struct TextFieldDemoView: View {
                         sampleSingleLineView
                         sampleMultiLineView
                         sampleFormTextFieldView
+                        sampleCustomSearchBarView
                     }
                     .padding(15)
                 }
