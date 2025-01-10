@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0309713D2D27E4BD0070D3CF /* SegmentedViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0309713C2D27E4A70070D3CF /* SegmentedViewDemo.swift */; };
 		0309EE692D23D3C90089D4CC /* GameDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0309EE682D23C3C50089D4CC /* GameDemoView.swift */; };
 		031318232D0ADD8000A7AEB2 /* UINavigationControllerPopGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313180F2D0ADD8000A7AEB2 /* UINavigationControllerPopGesture.swift */; };
 		031318242D0ADD8000A7AEB2 /* CustomNavBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031318112D0ADD8000A7AEB2 /* CustomNavBackButton.swift */; };
@@ -33,7 +34,6 @@
 		03247EBE2D224A79003ED4D0 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EBD2D224A6D003ED4D0 /* CustomTabView.swift */; };
 		03247EC02D2273C5003ED4D0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EBF2D2273C1003ED4D0 /* Home.swift */; };
 		03247EC22D2273CD003ED4D0 /* My.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EC12D2273CA003ED4D0 /* My.swift */; };
-		03247EC42D2280F6003ED4D0 /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EC32D2280DA003ED4D0 /* HideKeyboard.swift */; };
 		03247EC62D228495003ED4D0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03247EC52D228486003ED4D0 /* UIColorExtension.swift */; };
 		032C4FD22D13BC690036D2FD /* FormDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C4FD12D13BC5C0036D2FD /* FormDemoView.swift */; };
 		032C4FD42D140B280036D2FD /* RoundedAndShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C4FD32D140B0F0036D2FD /* RoundedAndShadowButton.swift */; };
@@ -44,17 +44,25 @@
 		0335206A2D1AA0AF006ABEBF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033520692D1AA076006ABEBF /* ActivityIndicator.swift */; };
 		0335F16B2D151154009004E4 /* AnimationDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335F16A2D151137009004E4 /* AnimationDemoView.swift */; };
 		0335F16D2D1577E9009004E4 /* LayoutDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335F16C2D1577DD009004E4 /* LayoutDemoView.swift */; };
+		034316B92D2BCC6300AF16D0 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034316B82D2BCC4400AF16D0 /* ImmersiveView.swift */; };
+		034316BB2D2BDAEB00AF16D0 /* KeyboardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034316BA2D2BDA9A00AF16D0 /* KeyboardDemoView.swift */; };
 		0378E7112D0FC3B000839E26 /* CardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0378E7102D0FC3A100839E26 /* CardDemoView.swift */; };
 		0378E7182D101B1A00839E26 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0378E7172D101B1A00839E26 /* R.generated.swift */; };
+		038D50812D2635D000AEBE4B /* TabPgeDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D50802D2635C100AEBE4B /* TabPgeDemoView.swift */; };
+		038D50832D26409900AEBE4B /* BottomTabDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D50822D26408D00AEBE4B /* BottomTabDemoView.swift */; };
 		03D784192D194C8F00CB0C9F /* JKRoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D784182D194C6C00CB0C9F /* JKRoundedRectangle.swift */; };
 		03D7841B2D19516500CB0C9F /* PopupDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D7841A2D19515600CB0C9F /* PopupDemoView.swift */; };
 		03F905302D1116FF00557DE6 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9052F2D1116F400557DE6 /* Consts.swift */; };
 		03F905332D11638300557DE6 /* CustomPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F905322D11637300557DE6 /* CustomPreferenceKey.swift */; };
 		03F905372D1167D100557DE6 /* KeyboardAwareDemoView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F905362D1167B500557DE6 /* KeyboardAwareDemoView2.swift */; };
+		03FB8EBE2D2CBF27008ED2F2 /* KeyboardAwareDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB8EBD2D2CBF15008ED2F2 /* KeyboardAwareDemoView.swift */; };
+		03FB8EC02D2D0D16008ED2F2 /* KeyboardAwareDemo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB8EBF2D2D0CFF008ED2F2 /* KeyboardAwareDemo3.swift */; };
+		03FB8EC22D2D12A4008ED2F2 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FB8EC12D2D1291008ED2F2 /* KeyboardReadable.swift */; };
 		81D07729E5320B1BCF6334B7 /* Pods_SwiftUIBasicComponentDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EED63D0FFC2971C870FEBB /* Pods_SwiftUIBasicComponentDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0309713C2D27E4A70070D3CF /* SegmentedViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewDemo.swift; sourceTree = "<group>"; };
 		0309EE682D23C3C50089D4CC /* GameDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDemoView.swift; sourceTree = "<group>"; };
 		0313180F2D0ADD8000A7AEB2 /* UINavigationControllerPopGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerPopGesture.swift; sourceTree = "<group>"; };
 		031318112D0ADD8000A7AEB2 /* CustomNavBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBackButton.swift; sourceTree = "<group>"; };
@@ -82,7 +90,6 @@
 		03247EBD2D224A6D003ED4D0 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		03247EBF2D2273C1003ED4D0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		03247EC12D2273CA003ED4D0 /* My.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My.swift; sourceTree = "<group>"; };
-		03247EC32D2280DA003ED4D0 /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 		03247EC52D228486003ED4D0 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		032C4FD12D13BC5C0036D2FD /* FormDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDemoView.swift; sourceTree = "<group>"; };
 		032C4FD32D140B0F0036D2FD /* RoundedAndShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedAndShadowButton.swift; sourceTree = "<group>"; };
@@ -93,13 +100,20 @@
 		033520692D1AA076006ABEBF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		0335F16A2D151137009004E4 /* AnimationDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDemoView.swift; sourceTree = "<group>"; };
 		0335F16C2D1577DD009004E4 /* LayoutDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDemoView.swift; sourceTree = "<group>"; };
+		034316B82D2BCC4400AF16D0 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		034316BA2D2BDA9A00AF16D0 /* KeyboardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDemoView.swift; sourceTree = "<group>"; };
 		0378E7102D0FC3A100839E26 /* CardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDemoView.swift; sourceTree = "<group>"; };
 		0378E7172D101B1A00839E26 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		038D50802D2635C100AEBE4B /* TabPgeDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPgeDemoView.swift; sourceTree = "<group>"; };
+		038D50822D26408D00AEBE4B /* BottomTabDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabDemoView.swift; sourceTree = "<group>"; };
 		03D784182D194C6C00CB0C9F /* JKRoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKRoundedRectangle.swift; sourceTree = "<group>"; };
 		03D7841A2D19515600CB0C9F /* PopupDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDemoView.swift; sourceTree = "<group>"; };
 		03F9052F2D1116F400557DE6 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		03F905322D11637300557DE6 /* CustomPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPreferenceKey.swift; sourceTree = "<group>"; };
 		03F905362D1167B500557DE6 /* KeyboardAwareDemoView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareDemoView2.swift; sourceTree = "<group>"; };
+		03FB8EBD2D2CBF15008ED2F2 /* KeyboardAwareDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareDemoView.swift; sourceTree = "<group>"; };
+		03FB8EBF2D2D0CFF008ED2F2 /* KeyboardAwareDemo3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareDemo3.swift; sourceTree = "<group>"; };
+		03FB8EC12D2D1291008ED2F2 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
 		740268C0D808F20F2DB57511 /* Pods-SwiftUIBasicComponentDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIBasicComponentDemo.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIBasicComponentDemo/Pods-SwiftUIBasicComponentDemo.release.xcconfig"; sourceTree = "<group>"; };
 		76EED63D0FFC2971C870FEBB /* Pods_SwiftUIBasicComponentDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIBasicComponentDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD809D6F36A7345A322748F9 /* Pods-SwiftUIBasicComponentDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIBasicComponentDemo.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIBasicComponentDemo/Pods-SwiftUIBasicComponentDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				03247EC52D228486003ED4D0 /* UIColorExtension.swift */,
-				03247EC32D2280DA003ED4D0 /* HideKeyboard.swift */,
 				0313180F2D0ADD8000A7AEB2 /* UINavigationControllerPopGesture.swift */,
 			);
 			path = Extensions;
@@ -285,6 +298,10 @@
 		03F905342D11679900557DE6 /* Structure */ = {
 			isa = PBXGroup;
 			children = (
+				034316B82D2BCC4400AF16D0 /* ImmersiveView.swift */,
+				0309713C2D27E4A70070D3CF /* SegmentedViewDemo.swift */,
+				038D50822D26408D00AEBE4B /* BottomTabDemoView.swift */,
+				038D50802D2635C100AEBE4B /* TabPgeDemoView.swift */,
 				03F905352D1167A700557DE6 /* Keyboard */,
 			);
 			path = Structure;
@@ -293,6 +310,10 @@
 		03F905352D1167A700557DE6 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				03FB8EC12D2D1291008ED2F2 /* KeyboardReadable.swift */,
+				03FB8EBF2D2D0CFF008ED2F2 /* KeyboardAwareDemo3.swift */,
+				03FB8EBD2D2CBF15008ED2F2 /* KeyboardAwareDemoView.swift */,
+				034316BA2D2BDA9A00AF16D0 /* KeyboardDemoView.swift */,
 				03F905362D1167B500557DE6 /* KeyboardAwareDemoView2.swift */,
 			);
 			path = Keyboard;
@@ -452,12 +473,14 @@
 			files = (
 				031E3FF72D1277D900CBC810 /* ImageDemoView.swift in Sources */,
 				031318232D0ADD8000A7AEB2 /* UINavigationControllerPopGesture.swift in Sources */,
+				034316B92D2BCC6300AF16D0 /* ImmersiveView.swift in Sources */,
 				0335F16B2D151154009004E4 /* AnimationDemoView.swift in Sources */,
 				03247EB52D222EBD003ED4D0 /* TabDemoView.swift in Sources */,
 				031318242D0ADD8000A7AEB2 /* CustomNavBackButton.swift in Sources */,
 				031318252D0ADD8000A7AEB2 /* SampleSectionTitleView.swift in Sources */,
 				031318262D0ADD8000A7AEB2 /* ButtonDemoView.swift in Sources */,
 				03D784192D194C8F00CB0C9F /* JKRoundedRectangle.swift in Sources */,
+				038D50812D2635D000AEBE4B /* TabPgeDemoView.swift in Sources */,
 				031318272D0ADD8000A7AEB2 /* TextDemoView.swift in Sources */,
 				031318282D0ADD8000A7AEB2 /* TextFieldDemoView.swift in Sources */,
 				0378E7182D101B1A00839E26 /* R.generated.swift in Sources */,
@@ -472,6 +495,7 @@
 				033520662D1A9DFE006ABEBF /* AlertToast.swift in Sources */,
 				0335206A2D1AA0AF006ABEBF /* ActivityIndicator.swift in Sources */,
 				033520632D1A8D40006ABEBF /* AlertDemoView.swift in Sources */,
+				034316BB2D2BDAEB00AF16D0 /* KeyboardDemoView.swift in Sources */,
 				031E3FF92D12B24700CBC810 /* LottieView.swift in Sources */,
 				033520682D1A9FB1006ABEBF /* BlurView.swift in Sources */,
 				032C4FD62D141AD10036D2FD /* GestureDemoView.swift in Sources */,
@@ -479,16 +503,20 @@
 				03D7841B2D19516500CB0C9F /* PopupDemoView.swift in Sources */,
 				0319F6C92D0C2D37000FDF55 /* BaseView.swift in Sources */,
 				03247EC62D228495003ED4D0 /* UIColorExtension.swift in Sources */,
+				03FB8EC22D2D12A4008ED2F2 /* KeyboardReadable.swift in Sources */,
+				0309713D2D27E4BD0070D3CF /* SegmentedViewDemo.swift in Sources */,
 				032C4FD22D13BC690036D2FD /* FormDemoView.swift in Sources */,
+				03FB8EBE2D2CBF27008ED2F2 /* KeyboardAwareDemoView.swift in Sources */,
 				03247EC02D2273C5003ED4D0 /* Home.swift in Sources */,
 				0335F16D2D1577E9009004E4 /* LayoutDemoView.swift in Sources */,
 				03F905332D11638300557DE6 /* CustomPreferenceKey.swift in Sources */,
 				03247EB72D2237D6003ED4D0 /* HomeView.swift in Sources */,
 				03F905302D1116FF00557DE6 /* Consts.swift in Sources */,
 				031E3FFF2D12C51300CBC810 /* ImagePickerDemoView.swift in Sources */,
-				03247EC42D2280F6003ED4D0 /* HideKeyboard.swift in Sources */,
 				03247EBC2D2244D7003ED4D0 /* TabBarIcon.swift in Sources */,
 				031E40012D12CA0B00CBC810 /* ImagePicker.swift in Sources */,
+				03FB8EC02D2D0D16008ED2F2 /* KeyboardAwareDemo3.swift in Sources */,
+				038D50832D26409900AEBE4B /* BottomTabDemoView.swift in Sources */,
 				0313182C2D0ADD8000A7AEB2 /* SwiftUIBasicComponentDemoApp.swift in Sources */,
 				0378E7112D0FC3B000839E26 /* CardDemoView.swift in Sources */,
 			);

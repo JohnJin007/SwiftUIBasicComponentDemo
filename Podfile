@@ -11,4 +11,5 @@ target 'SwiftUIBasicComponentDemo' do
   pod 'R.swift'
   pod 'lottie-ios'
   pod 'Kingfisher', '7.6.1'
+  pod 'JXSegmentedView'
 end

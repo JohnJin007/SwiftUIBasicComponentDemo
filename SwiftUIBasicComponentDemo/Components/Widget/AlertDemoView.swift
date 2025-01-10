@@ -57,5 +57,33 @@ struct AlertDemoView: View {
         .toast(isPresenting: $regularToast) {
             AlertToast(type: .regular, title: "标题")
         }
+        .toast(isPresenting: $regularToastLong){
+            AlertToast(type: .regular, title: "标题")
+        }
+        .toast(isPresenting: $regularToastLongSubTitle){
+            AlertToast(type: .regular, subTitle: "副标题")
+        }
+        .toast(isPresenting: $errorToast, alert: {
+            AlertToast(type: .error(Color.red), title: "错误", subTitle: "副标题")
+        })
+        .toast(isPresenting: $completeToast, alert: {
+            AlertToast(type: .complete(Color.green), title: "已完成", subTitle: "副标题")
+        })
+        .toast(isPresenting: $loadingToast, alert: {
+            AlertToast(type: .loading, title: "标题", subTitle: "副标题")
+        })
+        .toast(isPresenting: $systemImageToast, alert: {
+            AlertToast(type: .systemImage("scribble", Color.green), title: "标题", subTitle: "副标题")
+        })
+        .toast(isPresenting: $systemImageBannerPop, alert: {
+            AlertToast(displayMode: .banner(.pop), type: .systemImage("scribble", Color.green), title: "标题", subTitle: "副标题")
+        })
+        .toast(isPresenting: $systemImageBannerSlide, alert: {
+            AlertToast(displayMode: .banner(.slide), type: .systemImage("scribble", Color.green), title: "标题", subTitle: "副标题")
+        })
+        .toast(isPresenting: $systemImageHub, alert: {
+            AlertToast(displayMode: .hud, type: .systemImage("scribble", Color.green), title: "标题", subTitle: "副标题")
+        })
+        .navigationTitle("提示示例").navigationBarTitleDisplayMode(.inline)
     }
 }

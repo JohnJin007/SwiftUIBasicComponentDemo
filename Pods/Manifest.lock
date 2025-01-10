@@ -1,10 +1,12 @@
 PODS:
+  - JXSegmentedView (1.4.1)
   - Kingfisher (7.6.1)
   - lottie-ios (4.4.1)
   - MarqueeLabel (4.5.0)
   - R.swift (7.3.2)
 
 DEPENDENCIES:
+  - JXSegmentedView
   - Kingfisher (= 7.6.1)
   - lottie-ios
   - MarqueeLabel
@@ -12,6 +14,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - JXSegmentedView
     - Kingfisher
     - lottie-ios
     - R.swift
@@ -19,11 +22,12 @@ SPEC REPOS:
     - MarqueeLabel
 
 SPEC CHECKSUMS:
+  JXSegmentedView: cd73555ce2134d1656db2cb383ba9c2f36fb5078
   Kingfisher: 93a3c6d0d551658a31e19f21747e1d15cb39d525
   lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
   MarqueeLabel: 4b46d196abd253448e830cbd976f9eacc3af0849
   R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
 
-PODFILE CHECKSUM: 9070622074adf9e2c52c42498c0541a0da1e96cc
+PODFILE CHECKSUM: e2e8a90fbbaebc6a93654341333671c411d4f3f1
 
 COCOAPODS: 1.15.2
