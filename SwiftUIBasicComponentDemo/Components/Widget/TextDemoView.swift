@@ -7,6 +7,7 @@
 import SwiftUI
 import MarqueeLabel
 import Foundation
+import AVKit
 
 struct TextDemoView: View {
     
@@ -24,6 +25,14 @@ struct TextDemoView: View {
     @State private var amount = 50.0
     
     @State private var name = "Paul"
+    
+    @Environment(\.redactionReasons) var redactionReasons
+    let bio = "The rain in Spain falls mainly on the Spaniards"
+    
+    let markdownText: LocalizedStringKey = "* This is **bold** text, this is *italic* text, and this is ***bold, italic*** text."
+    
+    @State private var completionAmount = 0.0
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     private var sampleMarqueeLabelView: some View {
         VStack {
@@ -346,7 +355,223 @@ struct TextDemoView: View {
                 .textFieldStyle(.roundedBorder)
                 .textCase(.lowercase)
                 .padding(.horizontal)
+            
+            Label("Your account", systemImage: "folder.circle")
+                .font(.title)
+                .labelStyle(.iconOnly)
+            Label {
+                Text("Paul Hudson")
+                    .foregroundStyle(.primary)
+                    .font(.largeTitle)
+                    .padding()
+                    .background(.gray.opacity(0.2))
+                    .clipShape(Capsule())
+            } icon: {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(.blue)
+                    .frame(width: 64, height: 64)
+            }
+            
+            // 占位符
+            Text("This is placeholder text")
+                .font(.title)
+                .redacted(reason: .placeholder)
+            
+            VStack {
+                Text("This is placeholder text")
+                Text("And so is this")
+            }
+            .font(.title)
+            .redacted(reason: .placeholder)
+            
+            if redactionReasons == .placeholder {
+                Text("Loading...")
+            } else {
+                Text(bio)
+                    .redacted(reason: redactionReasons)
+            }
+            
+            //敏感数据
+            VStack {
+                Text("Card number")
+                    .font(.headline)
+                if redactionReasons.contains(.privacy) {
+                    Text("[HIDDEN]")
+                } else {
+                    Text("1234 5678 9012 3456")
+                }
+            }
+            
+            //Markdown
+            VStack {
+                Text("This is regular text.")
+                Text("* This is **bold** text, this is *italic* text, and this is ***bold, italic*** text.")
+                Text("~~A strikethrough example~~")
+                Text("`Monospaced works too`")
+                Text("Visit Apple: [click here](https://apple.com)")
+                    .tint(.red)
+            }
+            
+            Text(markdownText)
+            
+            // 自定义链接
+            VStack {
+                Link("Visit Apple", destination: URL(string: "https://apple.com")!)
+                Text("[Visit Apple](https://apple.com)")
+            }
+            .environment(\.openURL, OpenURLAction(handler: handleURL))
+            
+            VStack(spacing: 50) {
+                Text("You can't touch this")
+                Text("Break it down!")
+                    .textSelection(.enabled)
+            }
+            
+            VStack(spacing: 50) {
+                Text("You can't touch this")
+                Text("Break it down!")
+            }
+            .textSelection(.enabled)
+            
+            Rectangle()
+                .fill(.blue.gradient)
+            
+            Text("Hello World")
+                .padding()
+                .foregroundStyle(.white)
+                .font(.largeTitle)
+                .background(
+                    LinearGradient(gradient: Gradient(colors: [.white, .red, .black]), startPoint: .leading, endPoint: .trailing)
+                )
+            
+            Circle()
+                .fill(
+                    RadialGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple]), center: .center, startRadius: 50, endRadius: 100)
+                )
+                .frame(width: 200, height: 200)
+            
+            Circle()
+                .fill(
+                    AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center)
+                )
+                .frame(width: 200, height: 200)
+            Circle()
+                .strokeBorder(
+                    AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center, startAngle: .zero, endAngle: .degrees(360)),
+                    lineWidth: 50
+                )
+                .frame(width: 200, height: 200)
+            
+            Text("Hacking with Swift")
+                .font(.system(size: 48))
+                .padding(50)
+                .background(
+                    Image("the_soup")
+                        .resizable()
+                )
+            
+            Text("Hacking with Swift")
+                .font(.largeTitle)
+                .padding()
+                .background(
+                    Circle()
+                        .fill(.red)
+                        .frame(width: 100, height: 100)
+                )
+                .clipped()
+            
+            Rectangle()
+                .fill(.red)
+                .frame(width: 200, height: 200)
+            
+            Circle()
+                .fill(.blue)
+                .frame(width: 100, height: 100)
+            RoundedRectangle(cornerRadius: 25)
+                .fill(.green)
+                .frame(width: 150, height: 100)
+            Capsule()
+                .fill(.green)
+                .frame(width: 150, height: 100)
+            
+            //填充和描边形状
+            Circle().stroke(.red, lineWidth: 20)
+                .fill(.orange)
+                .frame(width: 150, height: 150)
+            Spacer()
+                .frame(height: 40)
+            Circle()
+                .stroke(.blue, lineWidth: 45)
+                .stroke(.green, lineWidth: 35)
+                .stroke(.yellow, lineWidth: 25)
+                .stroke(.orange, lineWidth: 15)
+                .stroke(.red, lineWidth: 5)
+                .frame(width: 100, height: 100)
+            
+            Circle()
+                .strokeBorder(.red, lineWidth: 20)
+                .background(Circle().fill(.orange))
+                .frame(width: 150, height: 150)
+            
+            ZStack {
+                Circle()
+                    .fill(.orange)
+                Circle().strokeBorder(.red, lineWidth: 20)
+            }
+            .frame(width: 150, height: 150)
+            
+            Circle()
+                .trim(from: 0, to: 0.5)
+                .frame(width: 200, height: 200)
+                .rotationEffect(.degrees(180))
+            
+            Rectangle()
+                .trim(from: 0, to: completionAmount)
+                .stroke(.red, lineWidth: 20)
+                .frame(width: 200, height: 200)
+                //.rotationEffect(.degrees(-90))
+                .onReceive(timer) { _ in
+                    withAnimation {
+                        if completionAmount == 1 {
+                            completionAmount = 0
+                        } else {
+                            completionAmount += 0.2
+                        }
+                    }
+                }
+            
+            ZStack {
+                ContainerRelativeShape()
+                    .inset(by: 4)
+                    .fill(.blue)
+                
+                Text("Hello, World!")
+                    .font(.title)
+            }
+            .frame(width: 300, height: 200)
+            .background(.red)
+            .clipShape(Capsule())
+            
+//            VideoPlayer(player: AVPlayer(url: Bundle.main.url(forResource: "video", withExtension: "mp4")!))
+//                .frame(height: 400)
+            
+            VideoPlayer(player: AVPlayer(url: URL(string: "https://yoursite.com/video.mp4")!))
+                .frame(height: 400)
+            VideoPlayer(player: AVPlayer(url: URL(string: "https://yoursite.com/video.mp4")!)) {
+                VStack {
+                    Text("Watermark")
+                        .foregroundStyle(.black)
+                        .background(.white.opacity(0.7))
+                    Spacer()
+                }
+                .frame(width: 400, height: 300)
+            }
         }
+    }
+    
+    func handleURL(_ url: URL) -> OpenURLAction.Result {
+        print("Handle \(url) somehow")
+        return .handled
     }
     
     static let taskDateFormat: DateFormatter = {

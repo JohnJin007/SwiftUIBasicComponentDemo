@@ -13,9 +13,9 @@ struct CustomTabView: View {
             VStack {
                 switch viewRouter.currentPage {
                 case .home:
-                    Home()
+                    Home(title: "")
                 case .my:
-                    My()
+                    My(title: "")
                 }
                 Spacer()
                 ZStack {

@@ -51,7 +51,13 @@ struct SampleData {
         SampleItem(name: "底部导航栏页面框架", destination: BottomTabDemoView()),
         SampleItem(name: "顶部TAB页面框架", destination: SegmentedViewDemo()),
         SampleItem(name: "全屏页面", destination: ImmersiveView()),
-        SampleItem(name: "软键盘", destination: KeyboardDemoView())
+        SampleItem(name: "软键盘", destination: KeyboardDemoView()),
+        SampleItem(name: "TabBarView", destination: TabBarDemoView()),
+        SampleItem(name: "Tabs标签页", destination: TabsDemoView()),
+        SampleItem(name: "Tabs标签页吸顶", destination: TabsDemoView2()),
+        SampleItem(name: "游戏视图", destination: GameSceneDemoView()),
+        SampleItem(name: "导入视频", destination: PhotosPickerDemoView()),
+        SampleItem(name: "返回不同视图", destination: TossResultDemoView())
     ]
     
     // 获取示例数据

@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct LayoutDemoView: View {
+    @State private var count = 16
     
     private var hStackSampleView: some View {
         VStack {
@@ -197,14 +198,70 @@ struct LayoutDemoView: View {
     }
     
     var body: some View {
-        ScrollView {
-            VStack {
-                hStackSampleView
-                contentAlignmentSampleView
-                alignmentGuideSampleView
+        //        ScrollView {
+        //            VStack {
+        //                hStackSampleView
+        //                contentAlignmentSampleView
+        //                alignmentGuideSampleView
+        //            }
+        //            .padding(15)
+        //        }
+        //        .navigationBarTitle("布局示例", displayMode: .inline)
+        //        GeometryReader { geometry in
+        //            HStack(spacing: 0) {
+        //                Text("Left")
+        //                    .font(.largeTitle)
+        //                    .foregroundStyle(.black)
+        //                    .frame(width: geometry.size.width * 0.33)
+        //                    .background(.yellow)
+        //                Text("Right")
+        //                    .font(.largeTitle)
+        //                    .foregroundStyle(.black)
+        //                    .frame(width: geometry.size.width * 0.67)
+        //                    .background(.orange)
+        //            }
+        //        }
+        //        .frame(height: 50)
+        //        .padding()
+        //        .navigationBarTitle("布局示例", displayMode: .inline)
+        //    }
+        RadialLayout {
+            ForEach(0..<count, id: \.self) { _ in
+                Circle()
+                    .fill(.red)
+                    .frame(width: 32, height: 32)
             }
-            .padding(15)
         }
-        .navigationBarTitle("布局示例", displayMode: .inline)
+        .safeAreaInset(edge: .bottom) {
+            Stepper("Count: \(count)", value: $count.animation(), in: 0...36)
+                .padding()
+        }
+    }
+}
+
+//自定义布局
+struct RadialLayout: Layout {
+    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        proposal.replacingUnspecifiedDimensions()
+    }
+    
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        //计算圆形的半径
+        let radius = min(bounds.size.width, bounds.size.height) / 2
+        //计算每个子视图占据圆周的角度,并转化为弧度
+        let angle = Angle.degrees(360 / Double(subviews.count)).radians
+        
+        //循环放置子视图
+        for(index, subview) in subviews.enumerated() {
+            //获取每个子视图的大小
+            let viewSize = subview.sizeThatFits(.unspecified)
+            //根据每个子视图的索引计算其在圆周上的位置,(- .pi / 2 是为了调整起始角度，使得第一个子视图位于顶部)
+            let xPos = cos(angle * Double(index) - .pi / 2) * (radius - viewSize.width / 2)
+            let yPos = sin(angle * Double(index) - .pi / 2) * (radius - viewSize.height / 2)
+            
+            //计算最终的位置，将子视图放置在父视图的中心，并加上偏移量
+            let point = CGPoint(x: bounds.midX + xPos, y: bounds.midY + yPos)
+            subview.place(at: point, anchor: .center, proposal: .unspecified)
+        }
     }
 }

@@ -10,6 +10,7 @@ import Kingfisher
 struct ImageDemoView: View {
     @State private var tip: String = ""
     @State private var playLottie: Int = 0
+    @State private var value = 0.0
     
     private var sampleResourceImageView: some View {
         VStack {
@@ -201,6 +202,125 @@ struct ImageDemoView: View {
         }
     }
     
+    private var sampleImageView: some View {
+        VStack {
+            SampleSectionTitleView(title: "7.加载图片", desc: "iOS 17加载静态图片方式")
+            Image(.theSoup)
+                .resizable()
+                .scaledToFit()
+            Image(uiImage: UIImage(named: "the_soup")!)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 250)
+            Image(systemName: "cloud.heavyrain.fill")
+                .font(.largeTitle)
+            Image("a-nanguo") //平铺
+                .resizable(capInsets: EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20),resizingMode: .tile)
+            Image(systemName: "moon.stars.fill")
+            Image(systemName: "wind.snow")
+                .font(.largeTitle)
+            Image(systemName: "cloud.heavyrain.fill")
+                .font(.largeTitle)
+                .foregroundStyle(.red)
+            Image(systemName: "cloud.sun.rain.fill")
+                .renderingMode(.original)//彩色元素
+                .font(.largeTitle)
+                .padding()
+                .background(.black)
+                .clipShape(Circle())
+            Image(systemName: "person.crop.circle.fill.badge.plus")
+                .renderingMode(.original)
+                .foregroundStyle(.blue)
+                .font(.largeTitle)
+        }
+    }
+    
+    private var sampleGradientView: some View {
+        VStack {
+            Rectangle().fill(.blue.gradient)
+        }
+    }
+    
+    private var sampleLoadNetworkImageView: some View {
+        VStack {
+            AsyncImage(url: URL(string: "https://hws.dev/paul2.jpg")) { image in
+                image.resizable()
+            } placeholder: {
+                Color.red
+            }
+            .frame(width: 128, height: 128)
+            .clipShape(.rect(cornerRadius: 25))
+            
+            AsyncImage(url: URL(string: "https://hws.dev/paul.jpg"), scale: 2)
+            
+            AsyncImage(url: URL(string: "https://hws.dev/paul3.jpg")) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                case .success(let image):
+                    image.resizable()
+                case .failure(_):
+                    Image(systemName: "photo")
+                        .font(.largeTitle)
+                default:
+                    ProgressView()
+                }
+            }
+            .frame(width: 256, height: 256)
+            .clipShape(.rect(cornerRadius: 25))
+            
+            Image(systemName: "theatermasks")
+                .symbolRenderingMode(.hierarchical) //分层
+                .foregroundStyle(.blue)
+                .font(.system(size: 144))
+            
+            Image(systemName: "shareplay")
+                .symbolRenderingMode(.palette)
+                .foregroundStyle(.blue, .black)
+                .font(.system(size: 144))
+            
+            Image(systemName: "person.3.sequence.fill")
+                .symbolRenderingMode(.palette)
+                .foregroundStyle(.blue, .green, .red)
+                .font(.system(size: 144))
+            
+            Image(systemName: "person.3.sequence.fill")
+                .symbolRenderingMode(.palette)
+                .foregroundStyle(
+                    .linearGradient(colors: [.red, .black], startPoint: .top, endPoint: .bottomTrailing),
+                    .linearGradient(colors: [.green, .black], startPoint: .top, endPoint: .bottomTrailing),
+                    .linearGradient(colors: [.blue, .black], startPoint: .top, endPoint: .bottomTrailing)
+                )
+                .font(.system(size: 144))
+            
+            VStack {
+                HStack {
+                    Image(systemName: "aqi.low", variableValue: value)
+                    Image(systemName: "wifi", variableValue: value)
+                    Image(systemName: "chart.bar.fill", variableValue: value)
+                    Image(systemName: "waveform", variableValue: value)
+                }
+                Slider(value: $value)
+                    .frame(width: 300)
+            }
+            .font(.system(size: 72))
+            .foregroundStyle(.blue)
+            .padding()
+            
+            Image(systemName: "bubbles.and.sparkles.fill")
+                .font(.system(size: 144, weight: .black))
+                .foregroundStyle(
+                    MeshGradient(width: 2, height: 2, points: [
+                        [0, 0], [1, 0],
+                        [0, 1], [1, 1]
+                    ], colors: [
+                        .indigo, .cyan,
+                        .purple, .pink
+                    ])
+                )
+        }
+    }
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -213,6 +333,9 @@ struct ImageDemoView: View {
                 sampleSystemImageView
                 sampleLottieImageView
                 sampleNetworkImageView
+                sampleImageView
+                sampleGradientView
+                sampleLoadNetworkImageView
             }
             .padding(15)
         }

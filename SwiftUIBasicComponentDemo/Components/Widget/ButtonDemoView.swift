@@ -15,7 +15,11 @@ struct ButtonDemoView: View {
     @State var sliderValue = 0.0
     @State var stepValue = 0
     @State var stepperValue = 0
-    
+    @State private var petCount = 0
+    @State private var isFavorite = false
+    @State private var animate = false
+    @State private var animationsRunning = false
+        
     private var sampleButton: some View {
         VStack {
             SampleSectionTitleView(title: "1.普通按钮", desc: "基于原生的Button按钮")
@@ -216,6 +220,93 @@ struct ButtonDemoView: View {
         }
     }
     
+    private var sampleSymbolEffectButtonView: some View {
+        VStack {
+            Button {
+                petCount += 1
+            } label: {
+                Label("Pet the Dog", systemImage: "dog")
+            }
+            .symbolEffect(.bounce, value: petCount)
+            .font(.largeTitle)
+            
+            Button {
+                isFavorite.toggle()
+            } label: {
+                Label("Activate Inbox Zero", systemImage: "mail.stack")
+            }
+            .symbolEffect(.bounce.down, value: isFavorite)
+            .font(.largeTitle)
+            
+            Button {
+                animate.toggle()
+            } label: {
+                Image(systemName: "arrow.clockwise.square")
+                    .symbolEffect(.rotate, value: animate)
+                    .font(.largeTitle)
+            }
+            
+            Button {
+                isFavorite.toggle()
+            } label: {
+                Label("Activate Inbox Zero", systemImage: "mail.stack")
+            }
+            .symbolEffect(.bounce, options: .speed(3).repeat(3),value: isFavorite)
+            .font(.largeTitle)
+            
+            Button("Start Animations") {
+                withAnimation {
+                    animationsRunning.toggle()
+                }
+            }
+            
+            HStack {
+                Image(systemName: "square.stack.3d.up")
+                    .symbolEffect(.variableColor.iterative, value: animationsRunning)
+                    .font(.largeTitle)
+                Image(systemName: "square.stack.3d.up")
+                    .symbolEffect(.variableColor.cumulative, value: animationsRunning)
+                    .font(.largeTitle)
+                Image(systemName: "square.stack.3d.up")
+                    .symbolEffect(.variableColor.reversing.iterative, value: animationsRunning)
+                    .font(.largeTitle)
+                Image(systemName: "square.stack.3d.up")
+                    .symbolEffect(.variableColor.reversing.cumulative, value: animationsRunning)
+                    .font(.largeTitle)
+            }
+            
+            HStack {
+                Image(systemName: "square.stack.3d.up")
+                    .symbolEffect(.variableColor.iterative, options: .repeating, value: animationsRunning)
+                    .font(.largeTitle)
+
+                Image(systemName: "square.stack.3d.up")
+                    .symbolEffect(.variableColor.cumulative, options: .repeat(3), value: animationsRunning)
+                    .font(.largeTitle)
+
+                Image(systemName: "square.stack.3d.up")
+                    .symbolEffect(.variableColor.reversing.iterative, options: .speed(3), value: animationsRunning)
+                    .font(.largeTitle)
+
+                Image(systemName: "square.stack.3d.up")
+                    .symbolEffect(.variableColor.reversing.cumulative, options: .repeat(3).speed(3), value: animationsRunning)
+                    .font(.largeTitle)
+            }
+            
+            Button {
+                withAnimation {
+                    isFavorite.toggle()
+                }
+            } label: {
+                Label("Toggle Favorite", systemImage: isFavorite ? "checkmark" : "heart")
+                    .font(.largeTitle)
+            }
+            .contentTransition(.symbolEffect(.replace))
+            
+
+        }
+    }
+    
     var body: some View {
         BaseView(textColor: .red, iconColor: .red) {
             ScrollView {
@@ -226,6 +317,7 @@ struct ButtonDemoView: View {
                     sampleStepperView
                     sampleNavigationLink
                     sampleCustomButtonStyle
+                    sampleSymbolEffectButtonView
                 }
                 .padding(15)
             }
